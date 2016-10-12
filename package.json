@@ -1,14 +1,14 @@
 {
-  "name": "angular2-webpack-starter",
-  "version": "5.0.5",
-  "description": "An Angular 2 Webpack Starter kit featuring Angular 2 (Router, Http, Forms, Services, Tests, E2E, Coverage), Karma, Protractor, Jasmine, Istanbul, TypeScript, and Webpack by AngularClass",
+  "name": "code-gov-web",
+  "version": "0.0.0",
+  "description": "Code.gov is a website promoting good practices in code development, collaboration, and reuse across the U.S.  Government. Code.gov will provide tools and guidance to help agencies implement the [Federal Source Code Policy](https://sourcecode.cio.gov). It will include an inventory of the government's custom code to promote reuse between agencies and will provide tools to help government and the public collaborate on open source projects.",
   "keywords": [
     "angular2",
     "webpack",
     "typescript"
   ],
   "author": "Patrick Stapleton <patrick@angularclass.com>",
-  "homepage": "https://github.com/angularclass/angular2-webpack-starter",
+  "homepage": "https://github.com/presidential-innovation-fellows/code-gov-web",
   "license": "MIT",
   "scripts": {
     "rimraf": "rimraf",
@@ -95,12 +95,14 @@
     "@types/node": "^4.0.29",
     "@types/protractor": "^1.5.20",
     "@types/requirejs": "^2.1.26",
-    "@types/selenium-webdriver": "^2.44.26",
+    "@types/selenium-webdriver": "2.44.*",
     "@types/source-map": "^0.1.27",
     "@types/uglify-js": "^2.0.27",
     "@types/webpack": "^1.12.34",
     "angular2-hmr": "~0.8.0",
     "awesome-typescript-loader": "1.1.1",
+    "bourbon": "^4.2.7",
+    "bourbon-neat": "^1.8.0",
     "codelyzer": "~0.0.21",
     "copy-webpack-plugin": "^3.0.1",
     "css-loader": "^0.24.0",
@@ -141,17 +143,17 @@
     "url-loader": "^0.5.7",
     "uswds": "^0.12.1",
     "webpack": "2.1.0-beta.21",
-    "webpack-dev-middleware": "^1.6.1",
-    "webpack-dev-server": "^2.1.0-beta.0",
+    "webpack-dev-middleware": "1.6.1",
+    "webpack-dev-server": "2.1.0-beta.2",
     "webpack-md5-hash": "^0.0.5",
     "webpack-merge": "^0.14.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/angularclass/angular2-webpack-starter.git"
+    "url": "https://github.com/presidential-innovation-fellows/code-gov-web.git"
   },
   "bugs": {
-    "url": "https://github.com/angularclass/angular2-webpack-starter/issues"
+    "url": "https://github.com/presidential-innovation-fellows/code-gov-web/issues"
   },
   "engines": {
     "node": ">= 4.2.1",

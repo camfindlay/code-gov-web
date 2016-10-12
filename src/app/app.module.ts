@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
 import { AuthHttp, AuthConfig, AUTH_PROVIDERS, provideAuth} from 'angular2-jwt';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 /*
  * Platform and Environment providers/directives/pipes
@@ -16,6 +17,10 @@ import { AppComponent } from './components/app';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { DocsComponent } from './components/policy-guide/docs';
 import { HomeComponent } from './components/home';
+import {
+  IntroductionComponent
+} from './components/policy-guide/docs/overview/introduction';
+import { OverviewComponent } from './components/policy-guide/docs/overview';
 import { PolicyGuideComponent } from './components/policy-guide';
 
 // Application wide providers
@@ -32,16 +37,19 @@ const APP_PROVIDERS = [
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
-    RouterModule.forRoot(ROUTES, { useHash: false })
+    RouterModule.forRoot(ROUTES, { useHash: true })
   ],
   declarations: [
     AppComponent,
     DocsComponent,
     HomeComponent,
+    IntroductionComponent,
+    OverviewComponent,
     PolicyGuideComponent
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
     ENV_PROVIDERS,
+    {provide: LocationStrategy, useClass: HashLocationStrategy},
     APP_PROVIDERS
   ],
   bootstrap: [ AppComponent ]

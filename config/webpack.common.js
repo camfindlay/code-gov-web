@@ -81,8 +81,7 @@ module.exports = {
     root: helpers.root('src'),
 
     // remove other default values
-    modulesDirectories: ['node_modules'],
-
+    modulesDirectories: ['node_modules']
   },
 
   /*
@@ -107,8 +106,7 @@ module.exports = {
           flags: 'g'
         },
         include: [helpers.root('src')]
-      },
-
+      }
     ],
 
     /*
@@ -270,7 +268,8 @@ module.exports = {
 
   sassLoader: {
     includePaths: [
-      require('path').join(__dirname, '../node_modules/uswds/src/stylesheets')
+      require('bourbon').includePaths,
+      require('bourbon-neat').includePaths
     ]
   },
 
